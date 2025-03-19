@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI That Cares - Empathetic AI Assistant</title>
+    <script type="text/javascript">
+      (function(d, t) {
+          var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+          v.onload = function() {
+            window.voiceflow.chat.load({
+              verify: { projectID: '67cbeb728eb43f679840d526' },
+              url: 'https://general-runtime.voiceflow.com',
+              versionID: 'production',
+              voice: {
+                url: "https://runtime-api.voiceflow.com"
+              },
+              // Enhanced styling and features
+              styles: {
+                fontSize: '16px',
+                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                backgroundColor: '#1a1a1a',
+                accentColor: '#8A2BE2',
+                textColor: '#ffffff',
+                height: '600px',
+                width: '400px',
+                borderRadius: '20px'
+              },
+              chat: {
+                greeting: {
+                  enabled: true,
+                  message: "👋 Hi there! I'm your empathetic AI assistant. How can I help you today?"
+                },
+                inputs: {
+                  audio: true,
+                  attachments: false
+                },
+                avatar: {
+                  src: null,
+                  style: {
+                    backgroundColor: '#8A2BE2',
+                    borderRadius: '50%'
+                  }
+                }
+              },
+              // Enhanced launch options
+              launch: {
+                mode: 'overlay',
+                autoOpen: false,
+                trigger: '.chat-launch-button'
+              }
+            });
+          }
+          v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+      })(document, 'script');
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
